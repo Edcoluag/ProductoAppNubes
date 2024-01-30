@@ -7,7 +7,7 @@ handlers:
 
 #serve your app
 - url: .*
-script:auto
+  script:auto
 
 
 
