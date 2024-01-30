@@ -20,7 +20,8 @@ function iniciar() {
                 const userDoc = querySnapshot.docs[0];
                 var user = userDoc.data()['Rol'];
                 console.log("Usuario encontrado:", userDoc.data(), user);
-                window.location.href = 'inicio.php';
+                //window.location.href = 'inicio.php';
+                window.location.href = 'inicio.html';
                 localStorage.setItem('bornValue', user);
 
                 // Redirigir a inicio.php
