@@ -2,6 +2,16 @@
     font-family: Lato;
     src: url("../font/Lato-Regular.ttf");
 }
+
+body-inicio{
+    background-image: url('./fondofijo.jpg'); 
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el fondo */
+    background-position: center; /* Centra la imagen en el fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita *//* Reemplaza 'ruta/a/tu/imagen-de-perritos.jpg' con la ruta real de tu imagen */
+    font-family: Lato, Arial;
+    padding: 0;
+    margin: 0;
+}
 html, body{
     font-family: Lato, Arial;
     padding: 0;
@@ -164,3 +174,54 @@ input{
     margin-bottom: 4px;
     margin-top: 4px;
 }
+
+
+/*navbar*/
+/* Style the dropdown container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Style the dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Show the dropdown content when hovering over the dropdown */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/*CSS NUEVO*/
+/* Estilo para el contenedor del select */
+select{
+    padding: 10px;
+    font-size: 15px;
+}
+  /* Estilo para el select */
+  #rol select {
+    width: 200px; /* Ancho del select */
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc; /* Borde del select */
+    border-radius: 4px; /* Bordes redondeados */
+    background-color: #fff; /* Fondo blanco */
+    cursor: pointer; /* Cursor estilo puntero */
+  }
+  
+  /* Estilo para las opciones del select */
+  #rol option {
+    font-size: 16px;
+  }
+  
+  /* Cambiar estilo cuando se pasa el ratón sobre las opciones */
+  #rol option:hover {
+    background-color: #f2f2f2; /* Cambiar el fondo al pasar el ratón */
+  }
+  

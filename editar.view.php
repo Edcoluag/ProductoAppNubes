@@ -36,8 +36,10 @@
     <nav>
         <ul>
             <li class="active"><a href="inicio.php">INICIO</a></li>
-            <li><a href="registrar.view.php">REGISTRO</a></li>
-            <li><a href="listado.view.php">LISTA</a></li>
+            <li><a href="registrar.view.php">REGISTRO USUARIOS</a></li>
+            <li><a href="listado.view.php">LISTA USUARIOS</a></li>
+            <li><a href="registrar-centros.view.php">REGISTRO CENTROS</a></li>
+            <li><a href="listado-centros.view.php">LISTA CENTROS</a></li>
             <li class="right"><a href="logout.php">Salir</a></li>
         </ul>
     </nav>
@@ -50,26 +52,27 @@
 
                 <h1>Agregar Usuarios</h1>
                 <input type="text" id="id" placeholder="id" class="form-control " style="display: none;"><br>
+
                 <label>Username</label><br>
-                <input type="text" id="username-edit"  maxlength="40">
-                <br><br>
-                <label>Password</label><br>
-                <input type="text" id="password-edit" maxlength="40">
+                <input type="text" id="username-edit" maxlength="40">
                 <br><br>
                 <label>Nombre</label><br>
-                <input type="text"  id="nombre-edit" maxlength="40">
+                <input type="text" id="nombre-edit" maxlength="40">
                 <br><br>
                 <label>Direccion</label><br>
                 <input type="text" id="direccion-edit" maxlength="40">
                 <br><br>
                 <label>Telefono</label><br>
-                <input type="number"  id="telefono-edit" maxlength="40">
+                <input type="number" id="telefono-edit" maxlength="40">
                 <br><br>
-                <label>Rol</label><br>
-                <input type="text" id="rol-edit" maxlength="40">
+                <label for="rol">Rol</label><br>
+                <select name="rol" id="rol-edit" style="padding: 8px;">
+                    <option value="administrador">Administrador</option>
+                    <option value="veterinario">Veterinario</option>
+                </select>
                 <br><br>
 
-<!--                <button class="btn btn-info" id="boton-editar" onclick="Editando()">Editar</button>-->
+                <!--                <button class="btn btn-info" id="boton-editar" onclick="Editando()">Editar</button>-->
                 <button class="btn btn-info" onclick="Editare()">Editar</button>
                 <div id="mensajeeditar" style="color: #269bd4;"></div>
             </div>
@@ -77,7 +80,7 @@
 
     </div>
     <footer>
-        <p>Derechos reservados &copy; 2020</p>
+        <p>Derechos reservados &copy; 2024</p>
     </footer>
 
     <script>
@@ -86,16 +89,14 @@
             const urlParams = new URLSearchParams(window.location.search);
             const id = urlParams.get('id');
             const user = urlParams.get('usuario');
-            const pass = urlParams.get('password');
             const nom = urlParams.get('nombre');
             const dir = urlParams.get('direccion');
-            const tel= urlParams.get('telefono');
+            const tel = urlParams.get('telefono');
             const rol = urlParams.get('rol');
 
             // Establece los valores en los campos correspondientes
             document.getElementById('id').value = id;
             document.getElementById('username-edit').value = user;
-            document.getElementById('password-edit').value = pass;
             document.getElementById('nombre-edit').value = nom;
             document.getElementById('direccion-edit').value = dir;
             document.getElementById('telefono-edit').value = tel;

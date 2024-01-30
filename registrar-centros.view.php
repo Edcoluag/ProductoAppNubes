@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Registro de Usuarios</title>
+    <title>Registro de Centro</title>
 
     <!--Firestore-->
     <script src="https://www.gstatic.com/firebasejs/10.7.2/firebase-app-compat.js"></script>
@@ -15,7 +15,7 @@
 
     <script src="Conn.js"></script>
 
-    <title>Registro | TTK</title>
+    <title>Registro Centro | TTK</title>
     <meta name="description" content="Registro de Subscriptores TTK" />
     <link rel="stylesheet" href="css/style.css" />
 </head>
@@ -23,7 +23,7 @@
 <body>
 
     <div class="header">
-        <h1 class="text-center">Registro de Subscriptores TTK</h1>
+        <h1 class="text-center">Registro de Centro TTK</h1>
         <h3>ROL: <span id="usernameElement"></span></h3>
         <script>
             var storedBornValue = localStorage.getItem('bornValue');
@@ -48,69 +48,53 @@
     <div class="body">
 
         <div class="panel">
-            <h4>Registro de Subscriptores</h4>
+            <h4>Registro de Centros</h4>
 
             <div class="container">
 
-                <label>Username</label><br>
-                <input type="text" id="username" name="username" maxlength="40">
-                <br><br>
-                <label>Password</label><br>
-                <input type="text" name="password" id="password" maxlength="40">
-                <br><br>
-                <label>Correo</label><br>
-                <input type="email" name="password" id="correo" maxlength="40">
-                <br><br>
-                <label>Nombre</label><br>
-                <input type="text" name="nombre" id="nombre" maxlength="40">
+                <label>Nombre_Centro</label><br>
+                <input type="text" id="nombre-centro" maxlength="40">
                 <br><br>
                 <label>Direccion</label><br>
-                <input type="text" id="direccion" name="direccion" maxlength="40">
+                <input type="text" id="direccion-centro" maxlength="40">
+                <br><br>
+                <label>Especialista</label><br>
+                <input type="text" id="especialista-centro" maxlength="40">
+                <br><br>
+                <label>Servicio</label><br>
+                <input type="text" id="servicio-centro" maxlength="100">
                 <br><br>
                 <label>Telefono</label><br>
-                <input type="number" name="telefono" id="telefono" maxlength="40">
+                <input type="number" id="telefono-centro" maxlength="9">
                 <br><br>
-                <!-- <label>Rol</label><br>
-                <input type="text" name="rol" id="rol" maxlength="40">
-                <br><br> -->
-                <label for="rol">Rol</label><br>
-                <select name="rol" id="rol" style="padding: 8px;">
-                    <option value="administrador">Administrador</option>
-                    <option value="veterinario">Veterinario</option>
+                <label>Horario</label><br>
+                <input type="text" id="horario-centro" maxlength="40">
+                <br><br>
+                <label>Ciudad</label><br>
+                <select name="rol" id="ciudad-centro" style="padding: 8px;">
+                    <option value="Nuevo Chimbote">Nuevo Chimbote</option>
+                    <option value="Chimbote">Chimbote</option>
+                </select>
+                <br><br>
+                <label>Centro_Servicio</label><br>
+                <select name="rol" id="centroserv-centro" style="padding: 8px;">
+                    <option value="Adopcion">Adopcion</option>
+                    <option value="PetSpa">PetSpa</option>
+                    <option value="Veterinaria">Veterinaria</option>
                 </select>
                 <br><br>
 
+                <button class="btn btn-info" id="boton" onclick="guardar_centros()">Guardar</button>
 
+                <button class="btn btn-info" id="boton2" onclick="limpiar_centro()">Limpiar</button>
 
-                <button class="btn btn-info" id="boton" onclick="guardar()">Guardar</button>
+                <a class="btn-link" href="listado-centros.view.php">Ver Listado</a>
 
-                <button class="btn btn-info" id="boton2" onclick="limpiar()">Limpiar</button>
-
-                <a class="btn-link" href="listado.view.php">Ver Listado</a>
-
-                <div id="mensajeregistrar" style="color: #269bd4;"></div>
+                <div id="mensajeregistrar-centros" style="color: #269bd4;"></div>
                 <br><br>
 
             </div>
         </div>
-
-        <table class="table" style="display: none;">
-
-            <thead>
-                <tr>
-                    <th scope="col">id</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                    <th scope="col">born</th>
-                    <th scope="col">Eliminar</th>
-                    <th scope="col">Editar</th>
-                </tr>
-            </thead>
-
-            <tbody id="tabla">
-            </tbody>
-
-        </table>
 
 
     </div>

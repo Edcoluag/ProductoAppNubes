@@ -22,7 +22,7 @@
 <body>
 
     <div class="header">
-        <h1 class="text-center">Registro de Subscriptores TTK</h1>
+        <h1 class="text-center">Registro de CentrosTTK</h1>
 
         <h3>ROL: <span id="usernameElement"></span></h3>
         <script>
@@ -49,30 +49,33 @@
     <div class="body">
         <div class="panel">
 
-            <h4 class="text-center">Listado de Subscriptores</h4>
+            <h4 class="text-center">Listado de Centros</h4>
 
             <div class="form">
                 <table class="table">
 
                     <thead>
                         <tr>
-                            <th scope="col">Usuario</th>
-                            <th scope="col">Nombre</th>
+                            <th scope="col">Nombre Centro</th>
                             <th scope="col">Direccion</th>
-                            <th scope="col">Rol</th>
+                            <th scope="col">Especialista</th>
+                            <th scope="col">Servicio</th>
                             <th scope="col">Telefono</th>
+                            <th scope="col">Horario</th>
+                            <th scope="col">Ciudad</th>
+                            <th scope="col">Centro_Servicio</th>
                             <th scope="col">Eliminar</th>
                             <th scope="col">Editar</th>
                         </tr>
                     </thead>
 
-                    <tbody id="tabla">
+                    <tbody id="tabla-centros">
                     </tbody>
 
                 </table>
                 <br><br>
 
-                <a class="btn-link" href="registrar.view.php">Agregar Alumno</a>
+                <a class="btn-link" href="registrar-centros.view.php">Agregar Centro</a>
                 <br><br>
 
             </div>

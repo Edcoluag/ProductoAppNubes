@@ -1,6 +1,3 @@
-<?php
-session_start();
-?>
 <!DOCTYPE html>
 <html>
 
@@ -27,30 +24,28 @@ session_start();
     <nav>
         <ul>
             <li class="active"><a href="inicio.php">INICIO</a></li>
-            <li><a href="registrar.view.php">REGISTRO</a></li>
-            <li><a href="listado.view.php">LISTA</a></li>
+            <li><a href="registrar.view.php">REGISTRO USUARIOS</a></li>
+            <li><a href="listado.view.php">LISTA USUARIOS</a></li>
+            <li><a href="registrar-centros.view.php">REGISTRO CENTROS</a></li>
+            <li><a href="listado-centros.view.php">LISTA CENTROS</a></li>
             <li class="right"><a href="logout.php">Salir</a></li>
         </ul>
     </nav>
+
+
     <div class="body">
         <div class="panel">
-            <h1 class="text-center">TTK</h1>
-            <?php
-            if (isset($_GET['err']) && $_GET['err'] == 1) {
-                echo '<h3 class="error text-center">ERROR: Usuario no autorizado</h3>';
-            }
-            ?>
+            <h1 class="text-center">TukiTukiPets</h1>
             <br>
-            <hr>
             <p class="text-center">
-                <strong>Integrantes GRUPO21</strong>
+                <strong>Tuki Tuki Team</strong>
                 <br><br>Arrospide Gambini Steffano<br>Bocanegra Quipusco Yoseph<br>Cohaila Aguilar Luis
             </p>
             <br>
         </div>
     </div>
     <footer>
-        <p>Derechos reservados &copy; 2020</p>
+        <p>Derechos reservados &copy; 2024</p>
     </footer>
 </body>
 
