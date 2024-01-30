@@ -1,22 +1,13 @@
-# creame la configuracion de la app para subrilo a app engine cgp
-# https://cloud.google.com/appengine/docs/standard/python3/config/appref
+runtime: php81
 
-runtime: python37
-entrypoint: gunicorn -b :$PORT main:app
-
-# https://cloud.google.com/appengine/docs/standard/python3/config/appref#handlers_element
 handlers:
-- url: /static
-  static_dir: static
-- url: /.*
-  script: auto
-```   
+- url: /(.*\.(css|js|gif|png|jpg|svg|woff|woff2|ttf))$
+  static_files: \1
+  upload: .*\.(css|js|gif|png|jpg|svg|woff|woff2|ttf)$
 
-## 3. Crear el archivo main.py
-```python
-# Path: main.py
-# creame la configuracion de la app para subrilo a app engine cgp
-# https://cloud.google.com/appengine/docs/standard/python3/config/appref
+#serve your app
+- url: .*
+script:auto
 
 
 
