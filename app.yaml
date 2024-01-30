@@ -1,14 +1,11 @@
 runtime: php81
 
 handlers:
+# Serve static resources.
 - url: /(.*\.(css|js|gif|png|jpg|svg|woff|woff2|ttf))$
   static_files: \1
   upload: .*\.(css|js|gif|png|jpg|svg|woff|woff2|ttf)$
 
-#serve your app
+# Serve your app through a front controller at index.php or public/index.php.
 - url: .*
-  script:auto
-
-
-
-
+  script: auto
