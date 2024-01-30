@@ -64,7 +64,8 @@ function login() {
                             localStorage.setItem('bornValue', rolValue);
 
                             // Redirigir a la página 'inicio.php'
-                            window.location.href = 'inicio.php';
+                            //window.location.href = 'inicio.php';
+                            window.location.href = 'inicio.html';
                         });
                     } else {
                         // No se encontró ningún documento con el correo electrónico proporcionado
