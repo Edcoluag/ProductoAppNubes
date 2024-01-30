@@ -21,6 +21,7 @@ function iniciar() {
                 var user = userDoc.data()['Rol'];
                 console.log("Usuario encontrado:", userDoc.data(), user);
                 //window.location.href = 'inicio.php';
+                
                 window.location.href = 'inicio.html';
                 localStorage.setItem('bornValue', user);
 
@@ -64,7 +65,9 @@ function login() {
                             localStorage.setItem('bornValue', rolValue);
 
                             // Redirigir a la página 'inicio.php'
-                            window.location.href = './inicio.php';
+                            // window.location.href = './inicio.php';
+                            //modificacion de redireccion
+                            location.href = './inicio.php';
                         });
                     } else {
                         // No se encontró ningún documento con el correo electrónico proporcionado
