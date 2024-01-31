@@ -5,7 +5,8 @@ handlers:
 - url: /(.*\.(css|js|gif|png|jpg|svg|woff|woff2|ttf))$
   static_files: \1
   upload: .*\.(css|js|gif|png|jpg|svg|woff|woff2|ttf)$
-
-# Serve your app through a front controller at index.php or public/index.php.
+  
+# Catch-all handler to forward all other requests to the front controller.
 - url: /.*
   script: auto
+
