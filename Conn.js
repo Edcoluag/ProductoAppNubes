@@ -21,8 +21,7 @@ function iniciar() {
                 var user = userDoc.data()['Rol'];
                 console.log("Usuario encontrado:", userDoc.data(), user);
                 //window.location.href = 'inicio.php';
-                
-                window.location.href = 'inicio.html';
+                window.location.href = 'inicio.php';
                 localStorage.setItem('bornValue', user);
 
                 // Redirigir a inicio.php
@@ -66,7 +65,7 @@ function login() {
 
                             // Redirigir a la página 'inicio.php'
                             // window.location.href = './inicio.php';
-                            //modificacion de redireccion
+                            // modificacion de redireccion
                             location.href = './inicio.php';
                         });
                     } else {
