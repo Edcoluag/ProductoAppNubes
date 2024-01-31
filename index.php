@@ -48,7 +48,7 @@
                 <label for="first">Usuario:</label><br>
                 <input type="text" id="first" name="first" required><br><br>
                 <label for="last">Contraseña:</label><br>
-                <input type="text" id="last" name="last" required><br><br>
+                <input type="password" id="last" name="last" required><br><br>
                 <button class="btn btn-info" onclick="login()">Iniciar sesión</button>
                 <div id="errorMessage" style="color: red;"></div>
 
